@@ -6,8 +6,8 @@ public class CDOffering {
 		
 		//1. CDOferring (int term, double interestRate)
 			public CDOffering(int term, double interestRate) {
-				int cdTerm = term;
-				double cdInterestRate = interestRate;
+				cdTerm = term;
+				cdInterestRate = interestRate;
 			
 			}
 			

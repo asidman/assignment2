@@ -2,20 +2,19 @@ package com.meritamerica.assignment2;
 
 public class CDAccount extends BankAccount{
 	private CDOffering cdCDOffering;
-	private double cdBalance;
 	
-	
-	//1. CDAccount( CDOffering offering, double balance) {
-	public CDAccount (CDOffering offering, double balance) {
+	//1. CDAccount(CDOffering offering, double balance)
+	public CDAccount(CDOffering offering, double balance){
 		super(balance, offering.getInterestRate());
 		cdCDOffering = offering;
-		cdBalance = balance;
-		}
-	
-	//2. double getBalance()
+	}
+
+/*	//2. double getBalance()
+ * Not needed because already defined in Parent class
 	public double getBalance() {
 		return cdBalance;
 	}
+*/	
 	//3. double getInterestRate ()
 	public int getTerm() {
 		return cdCDOffering.getTerm();
@@ -24,14 +23,17 @@ public class CDAccount extends BankAccount{
 	public int getStartDate(int Date) {
 		return Date;
 	}
-	//5. long getAccountNumber () 
+/*	//5. long getAccountNumber () 
+ * Not needed because already defined in Parent class
 	public long getAccountNumber() {
 		return super.getAccountNumber();
 	}
+*/	
 	//6. double futureValue ()
 	public double futureValue () {
-		return super.getInterestRate();
+		return super.accountBalance * Math.pow(1 + this.cdCDOffering.getInterestRate(), this.cdCDOffering.getTerm());
 	}
 	
 }
 
+ 
