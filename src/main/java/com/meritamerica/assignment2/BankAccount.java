@@ -6,9 +6,7 @@ public class BankAccount {
 	protected double accountBalance;
 	protected double accountInterestRate;
 	protected long accountAccountNumber;
-	public BankAccount() {
-		
-	}
+	
 
 //	1. BankAccount(double balance, double interestRate)
 	public BankAccount(double balance, double interestRate) {
@@ -56,6 +54,12 @@ public class BankAccount {
 			return false;
 		}
 	}
+	
+
+	public String toString(){
+		return "";	
+	}
+	
 //8. double futureValue(int years)
 	public double futureValue(int years){
 		return accountBalance * Math.pow(1+ accountInterestRate, years);

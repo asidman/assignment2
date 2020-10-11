@@ -70,6 +70,7 @@ public class MeritBank {
 	public static void setCDOfferings(CDOffering[] offerings) {
 		cdOfferingList = offerings;
 	}
+
 	//static long getNextAccountNumber()
 	public static long getNextAccountNumber() {
 		return getNextAccountNumber();
